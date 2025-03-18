@@ -29,8 +29,8 @@ void merge(int *nums1, int nums1Size, int m, int *nums2, int nums2Size, int n)
 
 int main()
 {
-   int nums1[6] = {1, 2, 3, 0, 0, 0};
-   int nums2[3] = {2, 5, 6};
+   int nums1[6] = {2, 5, 6, 0, 0, 0};
+   int nums2[3] = {1, 2, 3};
    merge(nums1, 6, 3, nums2, 3, 3);
    for (int i = 0; i < 6; i++)
    {
