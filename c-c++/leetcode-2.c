@@ -15,15 +15,19 @@ struct ListNode *addTwoNumbers(struct ListNode *l1, struct ListNode *l2)
     dummy->next = NULL;
     ListNode *p = dummy;
     int carry = 0;
+
     while (l1 != NULL || l2 != NULL)
     {
         ListNode *node = (ListNode *)malloc(sizeof(ListNode));
         node->val = carry + (l1 ? l1->val : 0) + (l2 ? l2->val : 0);
         carry = node->val / 10;
         node->val %= 10;
-        node->next = p->next;
+
+        // 将新节点接到末尾
+        node->next = NULL;
         p->next = node;
-        p = p->next;
+        p = node;
+
         if (l1)
             l1 = l1->next;
         if (l2)
@@ -33,7 +37,7 @@ struct ListNode *addTwoNumbers(struct ListNode *l1, struct ListNode *l2)
     {
         ListNode *node = (ListNode *)malloc(sizeof(ListNode));
         node->val = carry;
-        node->next = p->next;
+        node->next = NULL;
         p->next = node;
     }
     return dummy->next;
