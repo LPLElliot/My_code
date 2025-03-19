@@ -62,5 +62,6 @@ int main()
         printf("%d ", result->val);
         result = result->next;
     }
+    printf("\n");
     return 0;
 }
