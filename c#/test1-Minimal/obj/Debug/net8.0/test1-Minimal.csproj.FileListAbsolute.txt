@@ -31,3 +31,4 @@ E:\Allcode\c#\test1-Minimal\obj\Debug\net8.0\refint\test1-Minimal.dll
 E:\Allcode\c#\test1-Minimal\obj\Debug\net8.0\test1-Minimal.pdb
 E:\Allcode\c#\test1-Minimal\obj\Debug\net8.0\test1-Minimal.genruntimeconfig.cache
 E:\Allcode\c#\test1-Minimal\obj\Debug\net8.0\ref\test1-Minimal.dll
+E:\Allcode\c#\test1-Minimal\obj\Debug\net8.0\test1-Minimal.sourcelink.json
