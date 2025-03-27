@@ -28,7 +28,7 @@ void NextDate(int &year, int &month, int &day)
 {
     if (!ValidDate(year, month, day))
     {
-        return; // 或者抛出异常，根据你的需求
+        return;
     }
     else
     {

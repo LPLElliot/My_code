@@ -54,3 +54,55 @@ TEST(NextDateTest, InvalidDateTest)
     ASSERT_EQ(month, 2);
     ASSERT_EQ(day, 30);
 }
+
+TEST(ValidDateTest, ValidDate)
+{
+    ASSERT_TRUE(ValidDate(2023, 10, 26));
+}
+
+TEST(ValidDateTest, InvalidYearTooLow)
+{
+    ASSERT_FALSE(ValidDate(1799, 10, 26));
+}
+
+TEST(ValidDateTest, InvalidYearTooHigh)
+{
+    ASSERT_FALSE(ValidDate(2201, 10, 26));
+}
+
+TEST(ValidDateTest, InvalidMonthTooLow)
+{
+    ASSERT_FALSE(ValidDate(2023, 0, 26));
+}
+
+TEST(ValidDateTest, InvalidMonthTooHigh)
+{
+    ASSERT_FALSE(ValidDate(2023, 13, 26));
+}
+
+TEST(ValidDateTest, InvalidDayTooLow)
+{
+    ASSERT_FALSE(ValidDate(2023, 10, 0));
+}
+
+TEST(ValidDateTest, InvalidDayTooHigh)
+{
+    ASSERT_FALSE(ValidDate(2023, 10, 32));
+}
+
+TEST(ValidDateTest, LeapYearValid)
+{
+    ASSERT_TRUE(ValidDate(2024, 2, 29));
+}
+
+TEST(ValidDateTest, LeapYearInvalid)
+{
+    ASSERT_FALSE(ValidDate(2023, 2, 29));
+}
+
+TEST(ValidDateTest, DaysInMonth)
+{
+    ASSERT_TRUE(ValidDate(2023, 2, 28));
+    ASSERT_TRUE(ValidDate(2023, 4, 30));
+    ASSERT_TRUE(ValidDate(2023, 1, 31));
+}
