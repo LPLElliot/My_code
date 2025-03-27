@@ -2,14 +2,14 @@ c-c++/DNode_test.exe
 c-c++/SqStack_test.exe
 c-c++/SqList_test.exe
 c-c++/LNode_test.exe
+c-c++/SqQueue_test.exe
+c#/test1-Minimal/obj
 c-c++/leetcode-20.exe
 c-c++/leetcode-3.exe
 c-c++/leetcode-2.exe
 c-c++/leetcode-5.exe
 c-c++/leetcode-88.exe
-c#/test1-Minimal/obj
 c-c++/leetcode-6.exe
-c-c++/SqQueue_test.exe
 c-c++/leetcode-4.exe
 c-c++/leetcode-7.exe
-vcpkg-master
+build
