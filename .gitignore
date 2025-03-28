@@ -24,3 +24,4 @@ c-c++/shujuku/LNode_test.exe
 c-c++/shujuku/SqList_test.exe
 c-c++/shujuku/SqQueue_test.exe
 c-c++/shujuku/SqStack_test.exe
+c-c++/shujuku/Kmp_test.exe
