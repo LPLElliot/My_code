@@ -2,63 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// char *convert(char *s, int numRows)
-// {
-//     char tmp[numRows][strlen(s)];
-//     memset(tmp, 0, sizeof(tmp));
-//     int lie = 0;
-//     int key = numRows - 2;
-//     char *result = (char *)malloc(strlen(s) + 1);
-//     int len = strlen(s);
-//     result[len] = '\0';
-//     int j = 0, k = 0;
-//     for (int i = 0; i < len;)
-//     {
-//         if (i >= len)
-//         {
-//             break;
-//         }
-//         for (j; j < numRows; j++)
-//         {
-//             if (i >= len)
-//             {
-//                 break;
-//             }
-//             tmp[j][lie] = s[i];
-//             i++;
-//         }
-//         lie++;
-//         for (k; k < key; k++)
-//         {
-//             if (i >= len)
-//             {
-//                 break;
-//             }
-//             tmp[numRows - k - 2][lie] = s[i];
-//             i++;
-//             lie++;
-//         }
-//         j = 0;
-//         k = 0;
-//     }
-//     int r = 0;
-//     for (int i = 0; i < numRows; i++)
-//     {
-//         for (int j = 0; j < strlen(s); j++)
-//         {
-//             if (tmp[i][j] != 0)
-//             {
-//                 result[r++] = tmp[i][j];
-//             }
-//             if (r == len)
-//             {
-//                 break;
-//             }
-//         }
-//     }
-//     return result;
-// }
-
 char *convert(char *s, int numRows)
 {
     int len = strlen(s);
