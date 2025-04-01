@@ -1,0 +1,33 @@
+@startuml ex1_2
+class Customer {
+  - name: String
+  - phone: String
+}
+
+class Table {
+  - id: String
+  - capacity: Integer
+}
+
+class TimeSlot {
+  - type: String (简餐/正餐/夜点)
+  - startTime: Time
+  - endTime: Time
+}
+
+class Booking {
+  - bookingId: String
+  - covers: Integer
+  - status: String (Pending/Arrived/Cancelled)
+}
+
+class WalkIn {
+  - arrivalTime: Time
+  - covers: Integer
+}
+
+Customer "1" --> "0..*" Booking
+Booking "1" --> "1" Table
+Booking "1" --> "1..*" TimeSlot
+WalkIn "1" --> "1" Table
+@enduml
