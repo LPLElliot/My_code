@@ -1,28 +1,31 @@
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using test2_Mvc.Data;
 using test2_Mvc.Models;
-using System.Linq;
-using Microsoft.EntityFrameworkCore;
+
+namespace test2_Mvc.Controllers;
+
 public class HomeController : Controller
 {
-    private readonly AppDbContext _context;
+    private readonly ILogger<HomeController> _logger;
 
-    public HomeController(AppDbContext context)
+    public HomeController(ILogger<HomeController> logger)
     {
-        _context = context;
+        _logger = logger;
     }
 
     public IActionResult Index()
     {
-        return View(_context.Parties.ToList());
+        return View();
     }
 
-    public IActionResult Attenders(int id)
+    public IActionResult Privacy()
     {
-        var attenders = _context.Rsvps
-            .Where(r => r.PartyId == id)
-            .Include(r => r.Party)
-            .ToList();
-        return View(attenders);
+        return View();
+    }
+
+    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+    public IActionResult Error()
+    {
+        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }
