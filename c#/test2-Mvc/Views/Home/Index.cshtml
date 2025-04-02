@@ -1,8 +1,37 @@
-﻿@{
+﻿@model IEnumerable<test2_Mvc.Models.Party>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<h2>聚会列表</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>名称</th>
+            <th>地点</th>
+            <th>日期</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var party in Model)
+        {
+            <tr>
+                <td>@party.Name</td>
+                <td>@party.Location</td>
+                <td>@party.Date.ToString("yyyy/MM/dd")</td>
+                <td>
+                    <a asp-controller="Rsvp" asp-action="Create" asp-route-partyId="@party.Id" class="btn btn-primary">RSVP Now</a>
+                    <a asp-action="Attenders" asp-route-id="@party.Id" class="btn btn-info">Show Attenders</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
