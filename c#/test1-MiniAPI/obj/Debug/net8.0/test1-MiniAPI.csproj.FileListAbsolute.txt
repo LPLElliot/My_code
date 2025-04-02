@@ -1,0 +1,6 @@
+E:\Allcode\c#\test1-MiniAPI\obj\Debug\net8.0\test1-MiniAPI.GeneratedMSBuildEditorConfig.editorconfig
+E:\Allcode\c#\test1-MiniAPI\obj\Debug\net8.0\test1-MiniAPI.AssemblyInfoInputs.cache
+E:\Allcode\c#\test1-MiniAPI\obj\Debug\net8.0\test1-MiniAPI.AssemblyInfo.cs
+E:\Allcode\c#\test1-MiniAPI\obj\Debug\net8.0\test1-MiniAPI.csproj.CoreCompileInputs.cache
+E:\Allcode\c#\test1-MiniAPI\obj\Debug\net8.0\test1-MiniAPI.MvcApplicationPartsAssemblyInfo.cache
+E:\Allcode\c#\test1-MiniAPI\obj\Debug\net8.0\test1-MiniAPI.sourcelink.json
