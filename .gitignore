@@ -30,3 +30,8 @@ c-c++/shujuku/SqQueue_test.exe
 c-c++/shujuku/SqStack_test.exe
 c-c++/shujuku/Kmp_test.exe
 
+c#/test2-Mvc/obj
+c#/test2-Mvc/bin
+c#/test2-Mvc/Migrations
+c#/test2-Mvc/wwwroot
+c#/test2-Mvc/obj/Debug/net8.0
