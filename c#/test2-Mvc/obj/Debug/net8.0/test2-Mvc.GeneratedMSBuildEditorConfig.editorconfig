@@ -1,11 +1,19 @@
 is_global = true
 build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = test2_Mvc
 build_property.RootNamespace = test2_Mvc
@@ -24,6 +32,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/Allcode/c\#/test2-Mvc/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Allcode/c\#/test2-Mvc/Views/Parties/Confirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGllc1xDb25maXJtYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Allcode/c\#/test2-Mvc/Views/Parties/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGllc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Allcode/c\#/test2-Mvc/Views/Parties/ShowAttenders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGllc1xTaG93QXR0ZW5kZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Allcode/c\#/test2-Mvc/Views/Parties/ShowUserParties.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGllc1xTaG93VXNlclBhcnRpZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Allcode/c\#/test2-Mvc/Views/Shared/Error.cshtml]

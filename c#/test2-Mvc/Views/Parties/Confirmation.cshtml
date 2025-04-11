@@ -1,0 +1,9 @@
+@{
+    ViewData["Title"] = "确认";
+}
+
+<h1>感谢您的注册！</h1>
+
+<p>@ViewBag.Name，您已成功注册参加聚会。</p>
+
+<a asp-action="ShowAttenders" asp-route-partyId="@ViewBag.PartyId">查看所有参与者</a>

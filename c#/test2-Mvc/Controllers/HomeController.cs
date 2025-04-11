@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PartyApp.Data;
-using System.Diagnostics; // 添加此 using 指令
-using test2_Mvc.Models;  //添加此using指令
+using System.Diagnostics;
+using test2_Mvc.Models;
 
 namespace PartyApp.Controllers
 {

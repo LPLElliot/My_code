@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "debugTest2-mvc",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/c#/test2-Mvc/bin/Debug/net8.0/test2-Mvc.dll",
+            "cwd": "${workspaceFolder}",
+            "requireExactSource": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        }
+    ]
+}

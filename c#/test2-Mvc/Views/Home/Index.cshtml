@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<PartyApp.Models.Party>
 
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "首页";
 }
 
 <div class="text-center">
@@ -36,7 +36,8 @@
                         @Html.DisplayFor(modelItem => item.EventDate)
                     </td>
                     <td>
-                        <a asp-controller="Parties" asp-action="Details" asp-route-id="@item.Id">注册</a>
+                        <a asp-controller="Parties" asp-action="Details" asp-route-id="@item.Id">注册</a> |
+                        <a asp-controller="Parties" asp-action="ShowAttenders" asp-route-partyId="@item.Id">查看参与者</a>
                     </td>
                 </tr>
             }

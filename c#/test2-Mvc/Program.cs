@@ -1,10 +1,8 @@
-// filepath: e:\Allcode\c#\test2-Mvc\Program.cs
+// 这是一个 ASP.NET Core MVC 应用程序的入口点
 using Microsoft.EntityFrameworkCore;
 using PartyApp.Data;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
 builder.Services.AddControllersWithViews();
 
 // 注册 ApplicationDbContext
@@ -20,7 +18,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
