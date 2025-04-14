@@ -1,16 +1,4 @@
-# Ignore node modules
-node_modules/
-
-# Ignore build outputs
-dist/
 build/
-
-# OS-specific files
-.DS_Store
-Thumbs.db
-
-# Environment files
-.env
 
 c-c++/leetcode/leetcode-2.exe
 c-c++/leetcode/leetcode-3.exe
@@ -30,8 +18,6 @@ c-c++/shujuku/SqQueue_test.exe
 c-c++/shujuku/SqStack_test.exe
 c-c++/shujuku/Kmp_test.exe
 
-c#/test2-Mvc/obj
-c#/test2-Mvc/bin
-c#/test2-Mvc/Migrations
-c#/test2-Mvc/wwwroot
-c#/test2-Mvc/obj/Debug/net8.0
+c#/
+pict/
+students.dat
