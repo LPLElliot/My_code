@@ -6,16 +6,10 @@ using test2_Mvc.Models;
 
 namespace PartyApp.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController(ILogger<HomeController> logger, ApplicationDbContext context) : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        private readonly ApplicationDbContext _context;
-
-        public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
-        {
-            _logger = logger;
-            _context = context;
-        }
+        private readonly ILogger<HomeController> _logger = logger;
+        private readonly ApplicationDbContext _context = context;
 
         public async Task<IActionResult> Index()
         {

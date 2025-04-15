@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace PartyApp.Models
 {
     public class PartyGuestViewModel

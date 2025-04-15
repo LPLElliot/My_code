@@ -2,19 +2,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PartyApp.Data;
 using PartyApp.Models;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace PartyApp.Controllers
 {
-    public class PartiesController : Controller
+    public class PartiesController(ApplicationDbContext context) : Controller
     {
-        private readonly ApplicationDbContext _context;
-
-        public PartiesController(ApplicationDbContext context)
-        {
-            _context = context;
-        }
+        private readonly ApplicationDbContext _context = context;
 
         public async Task<IActionResult> Index()
         {
@@ -158,7 +151,7 @@ namespace PartyApp.Controllers
             var existingGuest = await _context.Guests.FirstOrDefaultAsync(g => g.Email == email && g.PartyId == partyId);
             if (existingGuest != null)
             {
-                ModelState.AddModelError("Email", "该邮箱已经注册过该聚会！");
+                ModelState.AddModelError("Email", "This email is already registered for this party.");
                 var party = await _context.Parties.FindAsync(partyId);
                 if (party == null)
                 {
@@ -181,11 +174,10 @@ namespace PartyApp.Controllers
                 Phone = phone
             };
 
-            // 从数据库中加载 Party 对象
             var partyFromDb = await _context.Parties.FindAsync(partyId);
             if (partyFromDb == null)
             {
-                return NotFound(); // 如果找不到 Party，返回 NotFound
+                return NotFound();
             }
             guest.Party = partyFromDb;
 
@@ -195,7 +187,6 @@ namespace PartyApp.Controllers
             return RedirectToAction("Confirmation", new { name = name, partyId = partyId });
         }
 
-        // GET: Parties/Confirmation
         public IActionResult Confirmation(string name, int partyId)
         {
             ViewBag.Name = name;
@@ -203,7 +194,6 @@ namespace PartyApp.Controllers
             return View();
         }
 
-        // GET: Parties/ShowAttenders
         public async Task<IActionResult> ShowAttenders(int partyId)
         {
             var party = await _context.Parties.FindAsync(partyId);
@@ -222,7 +212,6 @@ namespace PartyApp.Controllers
             return View(viewModel);
         }
 
-        // GET: Parties/ShowUserParties
         public async Task<IActionResult> ShowUserParties(string email)
         {
             var guests = await _context.Guests.Where(g => g.Email == email).Include(g => g.Party).ToListAsync();
