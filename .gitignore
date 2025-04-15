@@ -25,6 +25,6 @@ c#/test1-MiniAPI/properties
 
 c#/test2-Mvc/bin
 c#/test2-Mvc/obj
-c#/test2-Mvc/Migration
+c#/test2-Mvc/Migrations
 c#/test2-Mvc/properties
 c#/test2-Mvc/wwwroot
