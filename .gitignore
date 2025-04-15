@@ -9,7 +9,7 @@ c-c++/leetcode/leetcode-7.exe
 c-c++/leetcode/leetcode-11.exe
 c-c++/leetcode/leetcode-20.exe
 c-c++/leetcode/leetcode-88.exe
-
+c-c++/leetcode/leetcode-94.exe
 
 c-c++/shujuku/DNode_test.exe
 c-c++/shujuku/LNode_test.exe
@@ -17,7 +17,6 @@ c-c++/shujuku/SqList_test.exe
 c-c++/shujuku/SqQueue_test.exe
 c-c++/shujuku/SqStack_test.exe
 c-c++/shujuku/Kmp_test.exe
-
 
 c#/test1-MiniAPI/bin
 c#/test1-MiniAPI/obj
