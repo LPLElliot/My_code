@@ -1,9 +1,4 @@
 build/
-<<<<<<< HEAD
-c#/
-pict/
-=======
->>>>>>> c1aa8121f430a5e3e38ac409620054fb397fdecf
 
 c-c++/leetcode/leetcode-2.exe
 c-c++/leetcode/leetcode-3.exe
@@ -22,10 +17,14 @@ c-c++/shujuku/SqList_test.exe
 c-c++/shujuku/SqQueue_test.exe
 c-c++/shujuku/SqStack_test.exe
 c-c++/shujuku/Kmp_test.exe
-<<<<<<< HEAD
-=======
 
-c#/
-pict/
-students.dat
->>>>>>> c1aa8121f430a5e3e38ac409620054fb397fdecf
+
+c#/test1-MiniAPI/bin
+c#/test1-MiniAPI/obj
+c#/test1-MiniAPI/properties
+
+c#/test2-Mvc/bin
+c#/test2-Mvc/obj
+c#/test2-Mvc/Migration
+c#/test2-Mvc/properties
+c#/test2-Mvc/wwwroot

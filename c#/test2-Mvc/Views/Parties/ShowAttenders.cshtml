@@ -1,0 +1,26 @@
+@model PartyApp.Models.PartyGuestViewModel
+
+@{
+    ViewData["Title"] = "参与者";
+}
+
+<h1>参与者列表 - @Model.Party.Title</h1>
+
+@if (Model.Guests != null && Model.Guests.Any())
+{
+    <ul>
+        @foreach (var guest in Model.Guests)
+        {
+            <li>
+                @guest.Name (@guest.Email)
+                <a asp-action="ShowUserParties" asp-route-email="@guest.Email">查看用户聚会</a>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>暂无参与者。</p>
+}
+
+<a asp-action="Details" asp-route-id="@Model.Party.Id">返回聚会详情</a>
