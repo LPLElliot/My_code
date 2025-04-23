@@ -12,8 +12,8 @@ namespace PartyApp.Controllers
         public async Task<IActionResult> Index()
         {
             return _context.Parties != null ?
-                        View(await _context.Parties.ToListAsync()) :
-                        Problem("Entity set 'ApplicationDbContext.Parties'  is null.");
+                View(await _context.Parties.ToListAsync()) :
+                Problem("Entity set 'ApplicationDbContext.Parties'  is null.");
         }
 
         public async Task<IActionResult> Details(int? id)
@@ -38,111 +38,6 @@ namespace PartyApp.Controllers
             };
 
             return View(viewModel);
-        }
-
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Location,EventDate,Description")] Party party)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(party);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(party);
-        }
-
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null || _context.Parties == null)
-            {
-                return NotFound();
-            }
-
-            var party = await _context.Parties.FindAsync(id);
-            if (party == null)
-            {
-                return NotFound();
-            }
-            return View(party);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Location,EventDate,Description")] Party party)
-        {
-            if (id != party.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(party);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!PartyExists(party.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(party);
-        }
-
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null || _context.Parties == null)
-            {
-                return NotFound();
-            }
-
-            var party = await _context.Parties
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (party == null)
-            {
-                return NotFound();
-            }
-
-            return View(party);
-        }
-
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            if (_context.Parties == null)
-            {
-                return Problem("Entity set 'ApplicationDbContext.Parties'  is null.");
-            }
-            var party = await _context.Parties.FindAsync(id);
-            if (party != null)
-            {
-                _context.Parties.Remove(party);
-            }
-
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool PartyExists(int id)
-        {
-            return (_context.Parties?.Any(e => e.Id == id)).GetValueOrDefault();
         }
 
         [HttpPost]
