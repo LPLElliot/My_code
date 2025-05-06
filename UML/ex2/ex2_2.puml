@@ -1,0 +1,43 @@
+@startuml analysis_class_diagram
+
+class ReservationUI <<Boundary>> {
+  + showAvailableTables()
+  + displayConfirmation()
+}
+
+class ReservationController <<Control>> {
+  + validateRequest()
+  + createBooking()
+  + checkTimeSlotConflict()
+}
+
+class Booking <<Entity>> {
+  - bookingId: String
+  - status: Enum
+  + calculateDeposit()
+}
+
+class Customer <<Entity>> {
+  - name: String
+  - phone: String
+}
+
+class Table <<Entity>> {
+  - tableId: String
+  - capacity: Integer
+  + isAvailable()
+}
+
+class TimeSlot <<Entity>> {
+  - type: String
+  - startTime: DateTime
+  + overlaps()
+}
+
+ReservationUI --> ReservationController
+ReservationController --> Booking
+ReservationController --> TimeSlot
+Booking "1" *-- "1" Customer
+Booking "1" *-- "1" Table
+Booking "1" *-- "1" TimeSlot
+@enduml

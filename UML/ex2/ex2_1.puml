@@ -1,0 +1,22 @@
+@startuml reservation_sequence
+participant "Customer" as user
+participant "ReservationUI" as boundary
+participant "ReservationController" as control
+participant "Booking" as entity
+participant "Table" as entity
+participant "TimeSlot" as entity
+
+user -> boundary: 提交预约请求(日期/人数/时段)
+boundary -> control: validateRequest()
+control -> TimeSlot: checkAvailability()
+TimeSlot --> control: availableTables[]
+control -> Table: filterByCapacity(人数)
+Table --> control: suitableTables[]
+control -> boundary: 显示可选餐桌
+user -> boundary: 选择餐桌并确认
+boundary -> control: createBooking()
+control -> Booking: new(顾客信息,餐桌,时段)
+Booking --> control: bookingID
+control -> boundary: 显示预约成功
+boundary -> user: 返回预约凭证
+@enduml
