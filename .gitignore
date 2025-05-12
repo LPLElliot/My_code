@@ -2,6 +2,8 @@ build/
 
 *.exe
 
+python/20250507/
+
 c#/test1-MiniAPI/bin
 c#/test1-MiniAPI/obj
 c#/test1-MiniAPI/properties
