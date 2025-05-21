@@ -3,6 +3,7 @@ build/
 *.exe
 
 python/20250507/
+python/20250521/
 
 c#/test1-MiniAPI/bin
 c#/test1-MiniAPI/obj
