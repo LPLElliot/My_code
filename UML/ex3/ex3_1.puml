@@ -1,0 +1,7 @@
+@startuml BookingStateMachine
+[*] --> Pending : createBooking()
+Pending --> Arrived : recordArrival()
+Pending --> Cancelled : cancelBooking()
+Arrived --> [*]
+Cancelled --> [*]
+@enduml

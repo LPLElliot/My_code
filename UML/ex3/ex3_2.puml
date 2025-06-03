@@ -1,0 +1,29 @@
+@startuml DesignClassDiagram
+class Customer {
+  -name: String
+  -phone: String
+  +getContactInfo(): String
+}
+
+class Table {
+  -tableId: String
+  -capacity: Integer
+  +isAvailable(timeSlot): Boolean
+}
+
+class Booking {
+  -bookingId: String
+  -status: Enum
+  +calculateDeposit(): Float
+}
+
+class ReservationController {
+  +makeReservation(customer, table, timeSlot): boolean
+  -validateTimeSlot(): boolean
+}
+
+Customer "1" --> "0..*" Booking
+Table "1" --> "0..*" Booking
+ReservationController --> Booking
+ReservationController --> Table
+@enduml

@@ -1,0 +1,15 @@
+@startuml ComponentDiagram
+component "ReservationSystem" {
+  [ReservationUI] as UI
+  [ReservationController] as Controller
+  [BookingService] as Service
+}
+
+component "Database" {
+  [MySQL] as DB
+}
+
+UI --> Controller : HTTP请求
+Controller --> Service : 业务逻辑
+Service --> DB : JDBC
+@enduml

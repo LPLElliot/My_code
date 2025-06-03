@@ -1,0 +1,12 @@
+@startuml DeploymentDiagram
+artifact "Web_Application.jar" as WebApp
+artifact "MySQL_Database" as MySQL
+
+node "Web_Server" {
+  artifact WebApp
+}
+node "Database_Server" {
+  artifact MySQL
+}
+WebApp --> MySQL : JDBC
+@enduml
