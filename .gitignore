@@ -4,13 +4,3 @@ build/
 
 python/20250507/
 python/20250521/
-
-c#/test1-MiniAPI/bin
-c#/test1-MiniAPI/obj
-c#/test1-MiniAPI/properties
-
-c#/test2-Mvc/bin
-c#/test2-Mvc/obj
-c#/test2-Mvc/Migrations
-c#/test2-Mvc/properties
-c#/test2-Mvc/wwwroot

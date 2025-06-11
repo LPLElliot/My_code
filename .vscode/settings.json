@@ -41,5 +41,6 @@
                 }
             }
         ]
-    }
+    },
+    "gtest-adapter.debugConfig": "C/C++"
 }
