@@ -1,5 +1,4 @@
 {
-    "cmake.sourceDirectory": "E:/Allcode/c-c++/software_test",
     "editor.tokenColorCustomizations": {
         "[*Light*]": {
             "textMateRules": [
@@ -42,5 +41,5 @@
             }
         ]
     },
-    "gtest-adapter.debugConfig": "C/C++"
+    "gtest-adapter.debugConfig": "C/C++",
 }
